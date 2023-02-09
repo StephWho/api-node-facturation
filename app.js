@@ -7,8 +7,6 @@ const apiRouter = require('./routes/apiRouter.js');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-
-// mongoose.connect('mongodb+srv://steph:steph@cluster0.rcrm2ld.mongodb.net/?retryWrites=true&w=majority')
 mongoose.connect('mongodb://127.0.0.1:27017/facturationdb')
 .then(() => console.log('Connexion à MongoDB réussie !'))
 .catch(() => console.log('Connexion à MongoDB échouée !'))
